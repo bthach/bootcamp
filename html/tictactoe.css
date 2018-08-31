@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    font-family: Montserrat;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+td {
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+}
+
+tr:nth-child(2) td {
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+td:nth-child(2) {
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+}
+
