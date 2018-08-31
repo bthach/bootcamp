@@ -1,0 +1,34 @@
+p {
+    font-family: Arial;
+}
+
+h1 {
+    font-family: Montserrat;
+}
+
+h1 {
+    font-size: 5.0em;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+p {
+    font-size: 2.0em;
+    text-decoration: underline;
+    font-family: Raleway;
+}
+
+span {
+    font-size: 2.0em;
+}
+
+body {
+    font-size: 10px;
+    line-height: 1
+    
+}
+
+p {
+    font-weight: lighter;
+    text-align: right;
+}
