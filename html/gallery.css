@@ -9,3 +9,9 @@ body {
 .navbar-dark .navbar-nav .nav-link {
     color: white;
 }
+
+img {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
