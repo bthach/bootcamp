@@ -4,11 +4,13 @@ var express         = require("express"),
     app             = express(),
     bodyParser      = require("body-parser"),
     mongoose        = require("mongoose");
+    methodOverride  = require("method-override");
 
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended : true}));
+app.use(methodOverride("_method"));
 
 // title, image,
 
@@ -89,7 +91,25 @@ app.get("/blogs/:id/edit", function(req,res) {
 // UPDATE ROUTE
 
 app.put("/blogs/:id", function(req, res) {
-    res.send("Update route");
+    Blog.findOneAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
+        if (err) {
+            res.redirect("/blogs");
+        } else {
+            res.redirect("/blogs/" + req.params.id);
+        }
+    })
+})
+
+// DELETE ROUTE
+
+app.delete("/blogs/:id", function(req, res) {
+    Blog.findOneAndDelete(req.params.id, function(err) {
+        if (err) {
+            res.send("error");
+        } else {
+            res.redirect("/blogs");
+        }
+    })
 })
 
 app.listen(3000, function() {
