@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+<h1><%= hike.name %></h1>
+
+<img src="<%= hike.image %>">
+
+<p><%= hike.description %></p>
+
+<p>
+    <a class="btn btn-success" href="/hikes/<%= hike._id %>/comments/new">Add New Comment</a>
+</p>
+
+<% hike.comments.forEach(function(comment) { %>
+    <p>
+        <strong><%= comment.author %></strong> - <%= comment.text %></p>
+<% }) %>
+
+<% include ../partials/footer %>
