@@ -28,6 +28,10 @@ router.post("/", function(req, res) {
 });
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3735608bc36beeea99d17d4ebd861ce228680542
 router.get("/new", function(req, res) {
     res.render("hikes/new");
 })
