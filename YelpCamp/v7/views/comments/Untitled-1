@@ -1,0 +1,3 @@
+<%= hike._id %>/comments
+
+<%= hike.name %> 
