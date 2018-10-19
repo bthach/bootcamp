@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Create new comment for <%= hike.name %></h1>
+        </div>
+        <div style="width: 30%; margin: 20px auto">
+        <form action="/hikes/<%= hike._id %>/comments" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="comment[text]" placeholder="text">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </form>
+        <a href="/hikes">Go Back</a>
+        </div>
+    
+    </div>
+    </div>
+
+</div>
+
+
+<% include ../partials/footer %>
